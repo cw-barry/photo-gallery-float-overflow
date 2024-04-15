@@ -1,10 +1,6 @@
 /* Reset default styles */
-body,
-h1,
-p,
-ul,
-li,
-img {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -18,8 +14,10 @@ body {
 
 .container {
   max-width: 1200px;
+  max-width: 100%; /* Ensure container stretches to the full width */
+  max-height: calc(100vh - 60px -26px);
   margin: 0 auto;
-  padding: 20px;
+  padding: 0px;
 }
 
 /* Header styles */
@@ -27,7 +25,7 @@ header {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 10px 0;
+  padding: 2px 0;
 }
 
 header h1 {
@@ -80,7 +78,7 @@ header h1 {
 /* Navigation controls */
 .controls {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 button {
@@ -101,8 +99,11 @@ button:hover {
 
 /* Footer styles */
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 10px 0;
+  padding: 5px 0;
 }
